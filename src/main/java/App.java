@@ -36,7 +36,10 @@ public class App {
             //System.out.println(words[i]);
             String firstLetter = words[i].substring(0, 1).toUpperCase();
             String remainingLetters = words[i].substring(1).toLowerCase();
-            result += firstLetter + remainingLetters + ". ";
+            result += firstLetter + remainingLetters;
+            if (i != words.length-1) {
+                result +=  ". ";
+            }
         }
         return result;
     }
